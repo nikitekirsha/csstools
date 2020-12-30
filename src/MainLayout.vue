@@ -34,7 +34,7 @@ $breakpoint: 992px;
 
 .app {
   width: 1020px;
-  border-radius: 0.3em / 2;
+  border-radius: 0.15em;
   background: #e0e5e8;
   padding: 30px 0;
   box-shadow: 0 0 20px transparentize(#000, 0.92);

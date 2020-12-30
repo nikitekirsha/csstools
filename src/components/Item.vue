@@ -37,7 +37,7 @@ export default {
     width: 45px;
     height: 30px;
     margin: 20px auto 0;
-    border-radius: 0.3em / 2;
+    border-radius: 0.15em;
   }
 }
 </style>
