@@ -50,11 +50,15 @@ export default {
   }
 
   .input {
-    flex-grow: 1;
     padding: 12px;
     font-size: 18px;
     color: #000;
     font-weight: 400;
+    flex-grow: 1;
+    @media (max-width: 576px) {
+      flex-grow: unset;
+      width: 80%;
+    }
 
     &::placeholder {
       color: $text;
@@ -70,6 +74,9 @@ export default {
     padding: 0 10px;
     font-size: 14px;
     transition: 0.3s ease;
+    @media (max-width: 576px) {
+      width: 20%;
+    }
 
     &:hover {
       opacity: 0.6;
