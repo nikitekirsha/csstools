@@ -15,10 +15,10 @@
 
 <script>
 import BackButton from "./BackButton";
-import Gradient from "../functions/Gradient";
-import BoxShadow from "../functions/BoxShadow";
-import BorderRadius from "../functions/BorderRadius";
-import Border from "../functions/Border";
+import Gradient from "./functions/Gradient";
+import BoxShadow from "./functions/BoxShadow";
+import BorderRadius from "./functions/BorderRadius";
+import Border from "./functions/Border";
 
 export default {
   name: "ItemTemplate",
