@@ -1,15 +1,21 @@
 <template>
-  <div class="item">
-    <span class="item__title">
-      <slot></slot>
-    </span>
+  <div @click="selectProperty" class="item">
+    <span class="item__title">{{ prop }}</span>
     <div class="item__icon"></div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Item"
+  name: "Item",
+  props: {
+    prop: String
+  },
+  methods: {
+    selectProperty() {
+      this.$store.commit("selectProperty", this.prop);
+    }
+  }
 };
 </script>
 
@@ -19,7 +25,7 @@ export default {
   border-radius: 0.3em;
   border: 1px solid #dee4e4;
   padding: 30px 10px 45px;
-  box-shadow: 0 0 20px transparentize(#000, 0.92);
+  box-shadow: 0 0 20px transparentize(#000, 0.95);
   cursor: pointer;
   transition: 0.3s ease;
 

@@ -5,9 +5,26 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    blockStyle: {}
+    blockStyles: {},
+    currentProperty: null
   },
-  mutations: {},
-  actions: {},
-  modules: {}
+  mutations: {
+    updateBlockStyles(state, styles = {}) {
+      state.blockStyles = styles;
+    },
+    selectProperty(state, prop) {
+      state.currentProperty = prop;
+    },
+    getBack(state) {
+      state.currentProperty = null;
+    }
+  },
+  getters: {
+    allBlockStyles(state) {
+      return state.blockStyles;
+    },
+    currentProperty(state) {
+      return state.currentProperty;
+    }
+  }
 });

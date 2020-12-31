@@ -1,10 +1,15 @@
 <template>
-  <div class="block"></div>
+  <div :style="allBlockStyles" class="block"></div>
 </template>
 
 <script>
 export default {
-  name: "Block"
+  name: "Block",
+  computed: {
+    allBlockStyles() {
+      return this.$store.getters.allBlockStyles;
+    }
+  }
 };
 </script>
 

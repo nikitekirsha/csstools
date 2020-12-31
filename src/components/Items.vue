@@ -1,9 +1,9 @@
 <template>
   <div class="items">
-    <Item>gradient</Item>
-    <Item>box-shadow</Item>
-    <Item>border-radius</Item>
-    <Item>border</Item>
+    <Item prop="gradient" />
+    <Item prop="box-shadow" />
+    <Item prop="border-radius" />
+    <Item prop="border" />
   </div>
 </template>
 

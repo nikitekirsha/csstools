@@ -36,7 +36,7 @@ $breakpoint: 992px;
   width: 1020px;
   border-radius: 0.15em;
   background: #e0e5e8;
-  padding: 30px 0;
+  padding: 40px 0 50px;
   box-shadow: 0 0 20px transparentize(#000, 0.92);
   @media (max-width: $breakpoint) {
     overflow-y: scroll;
