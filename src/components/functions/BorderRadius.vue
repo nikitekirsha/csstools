@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Range from "../Range";
+import Range from "../ui/Range";
 export default {
   name: "BorderRadius",
   components: { Range },

@@ -1,7 +1,7 @@
 <template>
   <div @click="selectProperty" class="item">
     <span class="item__title">{{ prop }}</span>
-    <div class="item__icon"></div>
+    <div :style="iconStyle" class="item__icon"></div>
   </div>
 </template>
 
@@ -9,7 +9,8 @@
 export default {
   name: "Item",
   props: {
-    prop: String
+    prop: String,
+    iconStyle: String
   },
   methods: {
     selectProperty() {

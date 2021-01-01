@@ -1,9 +1,9 @@
 <template>
   <div class="items">
-    <Item prop="gradient" />
-    <Item prop="box-shadow" />
-    <Item prop="border-radius" />
-    <Item prop="border" />
+    <Item iconStyle="background: linear-gradient(to right, #b9b9b9, #e0e5e8);" prop="gradient" />
+    <Item iconStyle="box-shadow: 6px 6px 4px #d4d6d5;" prop="box-shadow" />
+    <Item iconStyle="border-radius: 12px" prop="border-radius" />
+    <Item iconStyle="background: none; border-left-style: dashed; border-bottom-style: dashed; border-top-style: solid; border-right-style: solid; border-width: 2px; border-color: #e0e5e8;" prop="border" />
   </div>
 </template>
 

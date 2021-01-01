@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Input from "./Input";
+import Input from "./ui/Input";
 import Subtitle from "./ui/Subtitle";
 import ContentWrapper from "./ui/ContentWrapper";
 import Block from "./Block";
