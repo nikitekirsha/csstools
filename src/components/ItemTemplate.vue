@@ -54,6 +54,9 @@ export default {
   @media (max-width: 992px) {
     max-width: 310px;
   }
+  @media (max-width: 576px) {
+    max-width: 100%;
+  }
 }
 
 .item__topline {

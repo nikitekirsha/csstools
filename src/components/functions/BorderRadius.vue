@@ -1,9 +1,9 @@
 <template>
   <div>
-    <Range v-model="ltValue" min="0" :max="maxValue" />
-    <Range v-model="rtValue" min="0" :max="maxValue" />
-    <Range v-model="blValue" min="0" :max="maxValue" />
-    <Range v-model="brValue" min="0" :max="maxValue" />
+    <Range title="Верхний левый угол:" :min="minValue" :max="maxValue" v-model="tlValue" @input="handler" />
+    <Range title="Верхний правый угол:" :min="minValue" :max="maxValue" v-model="trValue" @input="handler" />
+    <Range title="Нижний правый угол:" :min="minValue" :max="maxValue" v-model="brValue" @input="handler" />
+    <Range title="Нижний левый угол:" :min="minValue" :max="maxValue" v-model="blValue" @input="handler" />
   </div>
 </template>
 
@@ -14,12 +14,26 @@ export default {
   components: { Range },
   data() {
     return {
-      maxValue: 999,
-      ltValue: 0,
-      rtValue: 0,
-      blValue: 0,
-      brValue: 0
+      minValue: "0",
+      maxValue: "110",
+      tlValue: "0",
+      trValue: "0",
+      blValue: "0",
+      brValue: "0",
+      styles: {}
     };
+  },
+  methods: {
+    handler() {
+      const styles = {
+        "border-radius": `${this.tlValue}px ${this.trValue}px ${this.brValue}px ${this.blValue}px`
+      };
+
+      this.$store.commit("updateBlockStyles", styles);
+    }
+  },
+  mounted() {
+    this.handler();
   }
 };
 </script>

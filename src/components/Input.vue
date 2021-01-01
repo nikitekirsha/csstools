@@ -1,6 +1,6 @@
 <template>
   <div class="input-group">
-    <input placeholder="сюда выведется css" class="input" type="text" />
+    <input placeholder="сюда выведется css" class="input" type="text" :value="blockStyles" />
     <button class="input-group__button">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,19 @@
 
 <script>
 export default {
-  name: "Input"
+  name: "Input",
+  computed: {
+    blockStyles() {
+      let currentProperty = this.$store.getters.currentProperty;
+      let currentStyles = this.$store.getters.allBlockStyles[`${currentProperty}`] || "";
+
+      if (currentProperty) {
+        return currentProperty + ": " + currentStyles;
+      } else {
+        return "";
+      }
+    }
+  }
 };
 </script>
 

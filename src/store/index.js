@@ -17,6 +17,7 @@ export default new Vuex.Store({
     },
     getBack(state) {
       state.currentProperty = null;
+      state.blockStyles = {};
     }
   },
   getters: {

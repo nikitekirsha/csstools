@@ -1,13 +1,13 @@
 <template>
   <div class="parent">
-    <p v-if="title" class="text">{{ title }}</p>
+    <label v-if="title" class="text">{{ title }}</label>
     <input
-      @input="onInputChange"
-      v-model="inputValue"
       class="range"
       type="range"
       :min="min"
       :max="max"
+      :value="value"
+      @input="$emit('input', $event.target.value)"
     />
   </div>
 </template>
@@ -17,19 +17,9 @@ export default {
   name: "Range",
   props: {
     title: String,
-    min: Number,
-    max: Number,
-    value: Number
-  },
-  data() {
-    return {
-      inputValue: this.value
-    };
-  },
-  methods: {
-    onInputChange() {
-      this.$emit("input", this.inputValue);
-    }
+    min: String,
+    max: String,
+    value: String
   }
 };
 </script>
@@ -38,10 +28,14 @@ export default {
 .parent {
   margin-bottom: 20px;
   position: relative;
+  text-align: left;
 }
 
 .text {
   padding-bottom: 5px;
+  font-size: 14px;
+  color: #a4a8ab;
+  user-select: none;
 }
 
 $bg: #e0e5e8;
