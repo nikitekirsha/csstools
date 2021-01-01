@@ -3,13 +3,13 @@
     <ContentWrapper>
       <Subtitle>результат:</Subtitle>
       <Block />
-      <Input />
+      <Output />
     </ContentWrapper>
   </div>
 </template>
 
 <script>
-import Input from "./ui/Input";
+import Output from "./Output";
 import Subtitle from "./ui/Subtitle";
 import ContentWrapper from "./ui/ContentWrapper";
 import Block from "./Block";
@@ -18,7 +18,7 @@ export default {
   name: "Result",
   components: {
     Block,
-    Input,
+    Output,
     Subtitle,
     ContentWrapper
   }

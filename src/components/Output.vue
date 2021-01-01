@@ -1,6 +1,11 @@
 <template>
   <div class="input-group">
-    <input placeholder="сюда выведется css" class="input" type="text" :value="blockStyles" />
+    <input
+      placeholder="сюда выведется css"
+      class="input"
+      type="text"
+      :value="blockStyles"
+    />
     <button class="input-group__button">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -23,17 +28,17 @@
 
 <script>
 export default {
-  name: "Input",
+  name: "Output",
   computed: {
     blockStyles() {
       let currentProperty = this.$store.getters.currentProperty;
-      let currentStyles = this.$store.getters.allBlockStyles[`${currentProperty}`] || "";
+      let currentStyles = this.$store.getters.allBlockStyles[currentProperty];
 
-      if (currentProperty) {
+      if (currentProperty && currentStyles) {
         return currentProperty + ": " + currentStyles;
-      } else {
-        return "";
       }
+
+      return "";
     }
   }
 };
@@ -58,7 +63,7 @@ export default {
     border: none;
     outline: none;
     background: none;
-    font-family: Gotham Pro, Roboto, -apple-system, system-ui, sans-serif;
+    font-family: inherit;
   }
 
   .input {

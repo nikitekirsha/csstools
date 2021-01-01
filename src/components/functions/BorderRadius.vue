@@ -1,14 +1,38 @@
 <template>
   <div>
-    <Range title="Верхний левый угол:" :min="minValue" :max="maxValue" v-model="tlValue" @input="handler" />
-    <Range title="Верхний правый угол:" :min="minValue" :max="maxValue" v-model="trValue" @input="handler" />
-    <Range title="Нижний правый угол:" :min="minValue" :max="maxValue" v-model="brValue" @input="handler" />
-    <Range title="Нижний левый угол:" :min="minValue" :max="maxValue" v-model="blValue" @input="handler" />
+    <Range
+      title="Верхний левый угол:"
+      :min="minValue"
+      :max="maxValue"
+      v-model="tlValue"
+      @input="handler"
+    />
+    <Range
+      title="Верхний правый угол:"
+      :min="minValue"
+      :max="maxValue"
+      v-model="trValue"
+      @input="handler"
+    />
+    <Range
+      title="Нижний правый угол:"
+      :min="minValue"
+      :max="maxValue"
+      v-model="brValue"
+      @input="handler"
+    />
+    <Range
+      title="Нижний левый угол:"
+      :min="minValue"
+      :max="maxValue"
+      v-model="blValue"
+      @input="handler"
+    />
   </div>
 </template>
 
 <script>
-import Range from "../ui/Range";
+import Range from "../ui/inputs/Range";
 export default {
   name: "BorderRadius",
   components: { Range },

@@ -12,7 +12,7 @@
 import Subtitle from "./ui/Subtitle";
 import ContentWrapper from "./ui/ContentWrapper";
 import Items from "./Items";
-import ItemTemplate from "./ItemTemplate";
+import ItemTemplate from "./utils/ItemTemplate";
 
 export default {
   name: "Controls",
