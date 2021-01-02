@@ -1,15 +1,18 @@
 <template>
-  <input
-    class="input"
-    :style="customStyle"
-    :value="value"
-    :min="min"
-    :max="max"
-    :placeholder="placeholder"
-    :type="type"
-    @input="$emit('input', $event.target.value)"
-    ref="input"
-  />
+  <div>
+    <label class="title">{{ title }}</label>
+    <input
+      class="input"
+      :style="customStyle"
+      :value="value"
+      :min="min"
+      :max="max"
+      :placeholder="placeholder"
+      :type="type"
+      @input="$emit('input', $event.target.value)"
+      ref="input"
+    />
+  </div>
 </template>
 
 <script>
@@ -21,15 +24,24 @@ export default {
     max: String,
     type: String,
     placeholder: String,
-    customStyle: String
+    customStyle: String,
+    shouldNotClear: Boolean,
+    title: String
   },
   mounted() {
-    this.$refs["input"].value = "";
+    if (!this.shouldNotClear) this.$refs["input"].value = "";
   }
 };
 </script>
 
 <style lang="scss" scoped>
+.title {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  text-align: left;
+}
+
 .input {
   display: block;
   border-radius: 0.3em;

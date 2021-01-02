@@ -5,7 +5,7 @@
       <small class="item__subtitle">{{ currentProperty }}</small>
     </div>
     <div class="item_full">
-      <Gradient v-if="currentProperty === 'gradient'" />
+      <BackgroundImage v-if="currentProperty === 'background-image'" />
       <BoxShadow v-if="currentProperty === 'box-shadow'" />
       <BorderRadius v-if="currentProperty === 'border-radius'" />
       <Border v-if="currentProperty === 'border'" />
@@ -15,7 +15,7 @@
 
 <script>
 import BackButton from "./BackButton";
-import Gradient from "../functions/Gradient";
+import BackgroundImage from "../functions/BackgroundImage";
 import BoxShadow from "../functions/BoxShadow";
 import BorderRadius from "../functions/BorderRadius";
 import Border from "../functions/Border";
@@ -26,7 +26,7 @@ export default {
     Border,
     BorderRadius,
     BoxShadow,
-    Gradient,
+    BackgroundImage,
     BackButton
   },
   computed: {

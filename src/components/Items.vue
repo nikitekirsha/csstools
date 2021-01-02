@@ -1,8 +1,8 @@
 <template>
   <div class="items">
     <Item
-      iconStyle="background: linear-gradient(to right, #b9b9b9, #e0e5e8);"
-      prop="gradient"
+      iconStyle="background-image: linear-gradient(to right, #b9b9b9, #e0e5e8);"
+      prop="background-image"
     />
     <Item iconStyle="box-shadow: 6px 6px 4px #d4d6d5;" prop="box-shadow" />
     <Item iconStyle="border-radius: 12px" prop="border-radius" />
