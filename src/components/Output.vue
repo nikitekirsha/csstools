@@ -5,8 +5,9 @@
       class="input"
       type="text"
       :value="blockStyles"
+      ref="outputinput"
     />
-    <button class="input-group__button">
+    <button @click="copy" class="input-group__button">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 11 14"
@@ -41,6 +42,14 @@ export default {
       }
 
       return "";
+    }
+  },
+  methods: {
+    copy() {
+      const input = this.$refs["outputinput"];
+      input.select();
+      input.setSelectionRange(0, 99999);
+      document.execCommand("copy");
     }
   }
 };

@@ -48,7 +48,7 @@ export default {
     styles() {
       return {
         border: `${this.borderWidth}px ${this.selectedBorderType ||
-        "solid"} #000`
+          "solid"} #000`
       };
     }
   },
