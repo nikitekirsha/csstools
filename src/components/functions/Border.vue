@@ -44,14 +44,17 @@ export default {
       selectedBorderType: null
     };
   },
+  computed: {
+    styles() {
+      return {
+        border: `${this.borderWidth}px ${this.selectedBorderType ||
+        "solid"} #000`
+      };
+    }
+  },
   methods: {
     handler() {
-      const styles = {
-        border: `${this.borderWidth}px ${this.selectedBorderType ||
-          "solid"} #000`
-      };
-
-      this.$store.commit("updateBlockStyles", styles);
+      this.$store.commit("updateBlockStyles", this.styles);
     }
   },
   mounted() {

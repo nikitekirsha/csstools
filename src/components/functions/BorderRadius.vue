@@ -43,17 +43,19 @@ export default {
       tlValue: "0",
       trValue: "0",
       blValue: "0",
-      brValue: "0",
-      styles: {}
+      brValue: "0"
     };
+  },
+  computed: {
+    styles() {
+      return {
+        "border-radius": `${this.tlValue}px ${this.trValue}px ${this.brValue}px ${this.blValue}px`
+      };
+    }
   },
   methods: {
     handler() {
-      const styles = {
-        "border-radius": `${this.tlValue}px ${this.trValue}px ${this.brValue}px ${this.blValue}px`
-      };
-
-      this.$store.commit("updateBlockStyles", styles);
+      this.$store.commit("updateBlockStyles", this.styles);
     }
   },
   mounted() {

@@ -62,13 +62,16 @@ export default {
       degrees: "0"
     };
   },
-  methods: {
-    handler() {
-      const styles = {
+  computed: {
+    styles() {
+      return {
         "background-image": `linear-gradient(${this.degrees}deg, ${this.color1} ${this.color1Dim}%, ${this.color2} ${this.color2Dim}%)`
       };
-
-      this.$store.commit("updateBlockStyles", styles);
+    }
+  },
+  methods: {
+    handler() {
+      this.$store.commit("updateBlockStyles", this.styles);
     }
   },
   mounted() {

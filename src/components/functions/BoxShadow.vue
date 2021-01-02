@@ -41,13 +41,16 @@ export default {
       opacity: "1"
     };
   },
-  methods: {
-    handler() {
-      const styles = {
+  computed: {
+    styles() {
+      return {
         "box-shadow": `${this.horizontal}px ${this.vertical}px ${this.blur}px rgba(0, 0, 0, ${this.opacity})`
       };
-
-      this.$store.commit("updateBlockStyles", styles);
+    }
+  },
+  methods: {
+    handler() {
+      this.$store.commit("updateBlockStyles", this.styles);
     }
   },
   mounted() {
