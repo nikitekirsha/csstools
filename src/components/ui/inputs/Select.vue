@@ -4,7 +4,7 @@
     class="select"
     @input="$emit('input', $event.target.value)"
     ref="select"
-    @change="$refs['select'].style.fontWeight = '400'"
+    @change="changeStyle"
   >
     <option
       class="select__placeholder"
@@ -30,6 +30,13 @@ export default {
     value: String,
     customStyle: String
   },
+  methods: {
+    changeStyle() {
+      const item = this.$refs["select"];
+      item.style.fontWeight = "400";
+      item.style.color = "#000";
+    }
+  },
   mounted() {
     this.$refs["select"].style.fontWeight = "300";
   }
@@ -50,5 +57,6 @@ export default {
   padding: 10px 16px;
   margin: 0 auto;
   width: 100%;
+  color: #a4a8ab;
 }
 </style>

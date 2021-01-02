@@ -53,6 +53,9 @@ export default {
 
       this.$store.commit("updateBlockStyles", styles);
     }
+  },
+  mounted() {
+    this.handler();
   }
 };
 </script>

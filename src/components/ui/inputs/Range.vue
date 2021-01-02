@@ -6,6 +6,7 @@
       type="range"
       :min="min"
       :max="max"
+      :step="step"
       :value="value"
       @input="$emit('input', $event.target.value)"
     />
@@ -19,6 +20,7 @@ export default {
     title: String,
     min: String,
     max: String,
+    step: String,
     value: String
   }
 };
