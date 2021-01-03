@@ -35,10 +35,8 @@ export default {
       let currentProperty = this.$store.getters.currentProperty;
       let currentStyles = this.$store.getters.allBlockStyles[currentProperty];
 
-      console.log(currentProperty, currentStyles);
-
       if (currentProperty && currentStyles) {
-        return currentProperty + ": " + currentStyles;
+        return currentProperty + ": " + currentStyles + ";";
       }
 
       return "";
