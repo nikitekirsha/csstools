@@ -38,6 +38,7 @@ $breakpoint: 992px;
   background: #e0e5e8;
   padding: 40px 0 50px;
   box-shadow: 0 0 20px transparentize(#000, 0.92);
+  animation: 1.2s ease app-slide;
   @media (max-width: $breakpoint) {
     overflow-y: scroll;
   }
@@ -57,6 +58,12 @@ $breakpoint: 992px;
     @media (max-width: $breakpoint) {
       width: 100%;
     }
+  }
+}
+
+@keyframes app-slide {
+  0% {
+    transform: translateY(-100%) skew(0deg, 10deg) scale(1.1);
   }
 }
 </style>

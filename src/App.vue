@@ -32,8 +32,23 @@ export default {
   height: 100vh;
   font-family: Gotham Pro, Roboto, -apple-system, system-ui, sans-serif;
   font-weight: 300;
+  position: relative;
+  z-index: 1;
   @media (max-width: 992px) {
     height: auto;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    z-index: -1;
+    animation: 1.2s ease-in background-fade;
+    opacity: 0;
   }
 }
 
@@ -43,5 +58,11 @@ export default {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+@keyframes background-fade {
+  0% {
+    opacity: 0.4;
+  }
 }
 </style>
