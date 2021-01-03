@@ -4,6 +4,7 @@
       placeholder="сюда выведется css"
       class="input"
       type="text"
+      disabled
       :value="blockStyles"
       ref="outputinput"
     />
