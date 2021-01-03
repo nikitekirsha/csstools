@@ -3,7 +3,7 @@
     <ContentWrapper>
       <Subtitle>результат:</Subtitle>
       <Block />
-      <Output />
+      <Output v-if="currentProperty" />
     </ContentWrapper>
   </div>
 </template>
@@ -21,6 +21,11 @@ export default {
     Output,
     Subtitle,
     ContentWrapper
+  },
+  computed: {
+    currentProperty() {
+      return this.$store.getters.currentProperty;
+    }
   }
 };
 </script>
