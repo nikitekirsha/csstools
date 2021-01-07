@@ -62,11 +62,31 @@ export default {
       degrees: "0"
     };
   },
+  watch: {
+    allBlockStyles(newValue) {
+      let styles = newValue[this.currentProperty];
+
+      if (!styles) {
+        this.color1 = "#9a142d";
+        this.color1Dim = "0";
+        this.color2 = "#9a142d";
+        this.color2Dim = "100";
+        this.degrees = "0";
+        this.handler();
+      }
+    }
+  },
   computed: {
     styles() {
       return {
         "background-image": `linear-gradient(${this.degrees}deg, ${this.color1} ${this.color1Dim}%, ${this.color2} ${this.color2Dim}%)`
       };
+    },
+    currentProperty() {
+      return this.$store.getters.currentProperty;
+    },
+    allBlockStyles() {
+      return this.$store.getters.allBlockStyles;
     }
   },
   methods: {

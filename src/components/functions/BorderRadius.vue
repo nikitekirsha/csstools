@@ -51,6 +51,27 @@ export default {
       return {
         "border-radius": `${this.tlValue}px ${this.trValue}px ${this.brValue}px ${this.blValue}px`
       };
+    },
+    currentProperty() {
+      return this.$store.getters.currentProperty;
+    },
+    allBlockStyles() {
+      return this.$store.getters.allBlockStyles;
+    }
+  },
+  watch: {
+    allBlockStyles(newValue) {
+      let styles = newValue[this.currentProperty];
+
+      if (!styles) {
+        this.minValue = "0";
+        this.maxValue = "110";
+        this.tlValue = "0";
+        this.trValue = "0";
+        this.blValue = "0";
+        this.brValue = "0";
+        this.handler();
+      }
     }
   },
   methods: {

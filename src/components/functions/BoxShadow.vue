@@ -35,6 +35,7 @@
 <script>
 import Range from "../ui/inputs/Range";
 import ColorPicker from "../ui/inputs/ColorPicker";
+
 export default {
   name: "BoxShadow",
   components: {
@@ -71,6 +72,26 @@ export default {
       return {
         "box-shadow": `${this.horizontal}px ${this.vertical}px ${this.blur}px rgba(${this.colorRgb}, ${this.opacity})`
       };
+    },
+    currentProperty() {
+      return this.$store.getters.currentProperty;
+    },
+    allBlockStyles() {
+      return this.$store.getters.allBlockStyles;
+    }
+  },
+  watch: {
+    allBlockStyles(newValue) {
+      let styles = newValue[this.currentProperty];
+
+      if (!styles) {
+        this.color = "#000";
+        this.horizontal = "0";
+        this.vertical = "0";
+        this.blur = "0";
+        this.opacity = "1";
+        this.handler();
+      }
     }
   },
   methods: {

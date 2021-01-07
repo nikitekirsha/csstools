@@ -56,6 +56,24 @@ export default {
           this.color
         }`
       };
+    },
+    currentProperty() {
+      return this.$store.getters.currentProperty;
+    },
+    allBlockStyles() {
+      return this.$store.getters.allBlockStyles;
+    }
+  },
+  watch: {
+    allBlockStyles(newValue) {
+      let styles = newValue[this.currentProperty];
+
+      if (!styles) {
+        this.borderWidth = 0;
+        this.selectedBorderType = null;
+        this.color = "#000";
+        this.handler();
+      }
     }
   },
   methods: {
