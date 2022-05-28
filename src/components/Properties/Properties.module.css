@@ -1,0 +1,43 @@
+.properties {
+	display: grid;
+	gap: var(--gap);
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.property {
+	aspect-ratio: 1;
+	padding: 4rem;
+	background-color: var(--item-color);
+	color: var(--text-muted-color);
+	font-weight: 300;
+	border-radius: var(--round);
+	transition: background-color var(--time);
+}
+
+.property:hover {
+	background-color: var(--item-muted-color);
+}
+
+.icon {
+	margin: 3rem auto 0 auto;
+}
+
+@media (max-width: 992px) {
+	.property {
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+@media (max-width: 480px) {
+	.title {
+		display: none;
+	}
+
+	.icon {
+		margin: 0;
+	}
+}

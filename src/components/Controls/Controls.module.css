@@ -1,0 +1,24 @@
+.controls {
+	aspect-ratio: 1;
+	padding: 5rem;
+	background-color: var(--item-color);
+	border-radius: var(--round);
+}
+
+.fields {
+	display: grid;
+	gap: 5rem;
+}
+
+.actions {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 3rem;
+}
+
+@media (max-width: 992px) {
+	.controls {
+		aspect-ratio: 0;
+	}
+}

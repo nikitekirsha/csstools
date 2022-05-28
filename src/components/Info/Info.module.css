@@ -1,0 +1,10 @@
+.info {
+	aspect-ratio: 1;
+	padding: 4rem;
+	background-color: var(--item-muted-color);
+	color: var(--text-muted-color);
+	border-radius: var(--round);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

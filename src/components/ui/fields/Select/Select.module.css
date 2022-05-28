@@ -1,0 +1,20 @@
+.select {
+	padding: 2rem;
+	border-radius: var(--round);
+	background-color: var(--item-muted-color);
+	transition: box-shadow var(--time);
+	background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBjbGFzcz0iaW9uaWNvbiIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE0IiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0ibTExMiAxODQgMTQ0IDE0NCAxNDQtMTQ0IiBmaWxsPSJub25lIiBzdHJva2U9IiMyMDIyMjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI0OCIvPgo8L3N2Zz4K');
+	background-repeat: no-repeat;
+	background-position-x: calc(100% - 2rem);
+	background-position-y: 12px;
+}
+
+.select::placeholder {
+	color: var(--text-muted-color);
+}
+
+.select:hover,
+.select:focus {
+	outline: none;
+	box-shadow: 0 0 0 1rem var(--border-muted-color);
+}

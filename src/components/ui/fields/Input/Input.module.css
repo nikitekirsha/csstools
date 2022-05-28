@@ -1,0 +1,20 @@
+.input {
+	padding: 2rem;
+	border-radius: var(--round);
+	background-color: var(--item-color);
+	transition: box-shadow var(--time);
+}
+
+.input::placeholder {
+	color: var(--text-muted-color);
+}
+
+.input:hover,
+.input:focus {
+	outline: none;
+	box-shadow: 0 0 0 1rem var(--border-muted-color);
+}
+
+.muted {
+	background-color: var(--item-muted-color);
+}

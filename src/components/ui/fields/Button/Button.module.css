@@ -1,0 +1,18 @@
+.btn {
+	color: var(--text-color);
+	font-size: var(--small-size);
+	background-color: var(--item-color);
+	padding: 0.5rem 1rem;
+	border-radius: var(--round);
+	transition: background-color var(--time);
+}
+
+.btn:hover {
+	background-color: var(--item-muted-color);
+}
+
+@media (max-width: 480px) {
+	.btn {
+		padding: 1rem 2rem;
+	}
+}

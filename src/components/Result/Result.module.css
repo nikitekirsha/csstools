@@ -1,0 +1,6 @@
+.block {
+	aspect-ratio: 1;
+	background-color: var(--block-color);
+	border-radius: var(--round);
+	margin-bottom: 5rem;
+}
