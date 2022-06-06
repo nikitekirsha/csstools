@@ -50,6 +50,11 @@ strong {
 }
 
 body {
+	background-image: url('./assets/img/background.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
 	padding: 10rem;
 	min-width: 320px;
 	min-height: 100vh;
@@ -92,14 +97,6 @@ button {
 
 select {
 	-webkit-appearance: none;
-}
-
-.background {
-	background-image: url('./assets/img/background.jpg');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
 }
 
 @media (max-width: 992px) {

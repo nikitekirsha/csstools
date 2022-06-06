@@ -32,6 +32,8 @@ const routes: RouteObject[] = [
 		element: <Border />,
 	},
 
+	/* == end properties == */
+
 	{
 		path: '*',
 		element: <NotFound />,
